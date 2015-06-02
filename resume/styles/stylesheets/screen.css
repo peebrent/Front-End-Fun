@@ -1,0 +1,193 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 8, ../sass/screen.scss */
+#logo {
+  display: none;
+}
+
+/* line 12, ../sass/screen.scss */
+body {
+  background-color: #f0f0f0;
+  color: #181813;
+  font-family: 'Lato', Arial, sans-serif;
+  line-height: 1.5em;
+}
+
+/* line 18, ../sass/screen.scss */
+h5 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+  color: #4eb8d0;
+}
+
+/* line 23, ../sass/screen.scss */
+h3, h4 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+  color: #97b7c7;
+}
+
+/* line 28, ../sass/screen.scss */
+h2 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+  color: #4eb8d0;
+  font-size: 1.625em;
+  line-height: 1.2em;
+}
+
+/* line 35, ../sass/screen.scss */
+h1 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+  color: #364147;
+  font-weight: normal;
+}
+
+/* line 41, ../sass/screen.scss */
+ul {
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+/* line 46, ../sass/screen.scss */
+.job .title, .job .date_range {
+  display: block;
+}
+
+/* line 50, ../sass/screen.scss */
+#build dt {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+/* line 56, ../sass/screen.scss */
+.title {
+  font-weight: bold;
+  color: #474747;
+}
+
+/* line 61, ../sass/screen.scss */
+.container {
+  width: 98%;
+  margin: auto;
+  padding-top: 0.375em;
+}
+
+/* line 67, ../sass/screen.scss */
+#intro {
+  display: inline;
+  float: left;
+  width: 98.64583333333333%;
+  margin: 0 0.6770833333333334%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 0.75em;
+}
+
+/* line 78, ../sass/screen.scss */
+#intro header {
+  display: block;
+  width: 101.60550458715596%;
+  margin: 0 -0.8027522935779817%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 87, ../sass/screen.scss */
+#intro header #headshot {
+  display: inline;
+  float: left;
+  width: 6.727828746177369%;
+  margin: 0 0.8027522935779817%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 17.469418960244646%;
+}
+
+/* line 98, ../sass/screen.scss */
+#intro header #bio {
+  display: inline;
+  float: left;
+  width: 40.0611620795107%;
+  margin: 0 0.8027522935779817%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 108, ../sass/screen.scss */
+#intro header #quote {
+  display: inline;
+  float: left;
+  width: 31.727828746177373%;
+  margin: 0 0.8027522935779817%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 118, ../sass/screen.scss */
+#quote {
+  font-style: italic;
+  color: #4eb8d0;
+}
+
+/* line 123, ../sass/screen.scss */
+#quote p {
+  font-size: 1.25em;
+}
+
+@media screen and (min-width: 61.5em) {
+  /* line 130, ../sass/screen.scss */
+  .container {
+    width: 80%;
+    margin: auto;
+    margin-top: 1em;
+    padding-top: 0.375em;
+  }
+
+  /* line 137, ../sass/screen.scss */
+  #intro {
+    width: 98.39449541284404%;
+    margin: 0 0.8027522935779817%;
+    margin-bottom: 1em;
+  }
+
+  /* line 143, ../sass/screen.scss */
+  #intro header #quote {
+    display: inline;
+    float: left;
+    width: 31.727828746177373%;
+    margin: 0 0.8027522935779817%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /* line 155, ../sass/screen.scss */
+  #main {
+    display: inline;
+    float: left;
+    width: 65.06116207951071%;
+    margin: 0 0.8027522935779817%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /* line 165, ../sass/screen.scss */
+  #secondary {
+    display: inline;
+    float: left;
+    width: 31.727828746177373%;
+    margin: 0 0.8027522935779817%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: dotted 0.125em #B8B8B8;
+    padding-left: 1em;
+  }
+}
