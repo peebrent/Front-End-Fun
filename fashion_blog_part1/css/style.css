@@ -12,7 +12,7 @@ Developer @GA in NYC
 
 /* Box Model Hack */
 * {
-     -moz-box-sizing: border-box; /* Firexfox */
+     -moz-box-sizing: border-box; /* Firefox */
      -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
      box-sizing: border-box; /* IE */
 }
@@ -26,20 +26,106 @@ body {
      font-size: 12px;
      line-height: 1.4;
      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+     width: 60%;
+     margin: 0 auto;
+     padding-bottom: 50px;
 }
 
+img{
+width:100%;
+}
+
+h1 a{
+  color: #f30000;
+  text-decoration: none;
+  font-size: 4em;
+  font-weight: lighter;
+}
+
+h2 a{
+  color: #222;
+  text-decoration: none;
+  font-size: 3em;
+  font-weight: lighter;
+}
+
+header h2{
+  color: #222;
+  text-decoration: none;
+  font-size: 2.5em;
+  font-weight: lighter;
+}
+
+nav a{
+  color: #eee;
+  font-size: 2em;
+  padding: 5px;
+}
+
+h4 a{
+  color:#f30000;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav{
+    padding-bottom: 60px;
+    display: block;
+}
+
+article{
+border-bottom: 1px solid #bdbdbd;
+padding: 30px 0;
+}
+
+article h3{
+  color:#ccc;
+  font-size: 3em;
+  font-weight: lighter;
+}
+
+article h4{
+  text-align: right;
+  font-weight: bold;
+}
+
+article p{
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding: 20px 0;
+}
+
+article p:first-letter{
+  font-size: 3.5em;
+  color:#ddd;
+  font-weight: lighter;
+}
+
+footer nav{
+  font-size: .7em;
+}
+
+footer nav a{
+  color:#f30000;
+  text-decoration: none;
+}
+
+footer p{
+  font-size: 1.3em;
+  color:#bbb;
+}
+
+footer{
+  margin-top: 40px;
+  padding: 10px 0px 0px 0px;
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 
 /* Center the container */
-body {
-	width: 100%;
-  height:100%;
-	margin: 0;
-  padding: 0;
-}
+
 
 /******************************************
 /* ADDITIONAL STYLES
