@@ -21,6 +21,8 @@ body {
    padding-bottom: 50px;
 }
 
+
+
 img{
   width:100%;
 }
@@ -52,6 +54,9 @@ h4 a{
 nav{
     padding-bottom: 30px;
     display: block;
+    background-color: #000;
+    padding: 30px;
+    width: 100%;
 }
 
 article{
@@ -76,6 +81,12 @@ article h4{
   font-weight: bold;
 }
 
+#sidebar article h3{
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
 header h2{
   color: #222;
   text-decoration: none;
@@ -85,8 +96,10 @@ header h2{
 
 header nav a{
   color: #eee;
-  font-size: 1.7em;
-  padding-right:10px;
+  font-size: 2em;
+  padding:25px;
+  text-decoration: none;
+  border-right: 1px solid #fff;
 }
 
 footer{
@@ -116,8 +129,26 @@ footer nav a{
 
 /* Center the container */
 #container{
+  width: 100%;
+  margin: 60px;
+  padding: 0px 40px;
+}
+
+#main{
   width: 60%;
-  margin: 0 auto;
+  float: left;
+  top:60px;
+}
+
+#sidebar{
+  width: 30%;
+  float: right;
+  top:50px;
+}
+
+#sidebar ol li{
+  text-transform: capitalize;
+  color: #ff0000;
 }
 
 /******************************************
