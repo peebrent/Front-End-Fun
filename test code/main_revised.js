@@ -26,7 +26,6 @@ function Thermostat(){
 	   changeTemperature(currentNum);
 // 8. Declare variables for 6 and 7 below
 	   var timeout;
-	   var count = 0;
 // 5. Add Event Listener for up Button 	   
 	   upButton.addEventListener('mousedown', function(){
 // 6. Wrap update operations for mousedown inside of setInterval and set timer to 1/10 of a second
