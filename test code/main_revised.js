@@ -8,58 +8,56 @@ function Thermostat(){
 	var temperatureText = document.getElementById('temp');
 	var body = document.body;
 
-// 4. Implement Steve's calculator
+// 4. Implement Steve's calculator - I have to parse this thing to understand better...
 	var convertTempToColor = function(temp){
     //linear conversion from (-40 - 120 to 0 - 360)
     //returns hsl value to style background
     var hue = -1 * ( (temp - (40*-1)) / (120 - (40*-1)) ) * (360 - 0) + 0;
     return 'hsl('+hue+',70%,60%)';
   };
- // 12. Create this sucker by looking at Steve's code
+ // 11. I cheated here by looking at Steve's code. Why can't we throw body.style.backgroundColor into a variable?
   	var changeTemperature = function(temp){
   		temperatureText.innerHTML = temp + '<span>&deg;</span>';
   		body.style.backgroundColor = convertTempToColor(temp);
 
   	};
-// 7. Throw Event Listeners into a function so I can call init
+// 10. Throw Event Listeners into an init function - pretty little wrapper
 	var init = function(){
-
 	   changeTemperature(currentNum);
-	// 5. Add Event Listener for up Button 
+// 8. Declare variables for 6 and 7 below
 	   var timeout;
 	   var count = 0;
+// 5. Add Event Listener for up Button 	   
 	   upButton.addEventListener('mousedown', function(){
-	   	timeout = setInterval(function(){
-	   	currentNum = currentNum + 1;
-	   	changeTemperature(currentNum);
-	   	}, 100);
-
-	   	// 9. Realize the above alone doesn't work and add below
-	   	
+// 6. Wrap update operations for mousedown inside of setInterval and set timer to 1/10 of a second
+		    timeout = setInterval(function(){
+			   	currentNum = currentNum + 1;
+			   	changeTemperature(currentNum);
+		    }, 100);
 	   	return false;
 	   });
+// 7. Clear the interval on mouseup
 	   upButton.addEventListener('mouseup', function(){
-	   	clearInterval(timeout);
+		   	clearInterval(timeout);
         return false;
 	   });
-	// 6. Add Event Listener for down Button
+// 9. Repeat the above steps (6,7) for downbutton
 	   downButton.addEventListener('mousedown', function(){
-	   	timeout = setInterval(function(){
-	   	currentNum = currentNum - 1;
-	   	changeTemperature(currentNum);
-	   	}, 100);
-
-	   	return false;
+		   	timeout = setInterval(function(){
+		   	currentNum = currentNum - 1;
+		   	changeTemperature(currentNum);
+		   	}, 100);
+		return false;
 	   });
+
 	   downButton.addEventListener('mouseup', function(){
-	   	clearInterval(timeout);
+	   		clearInterval(timeout);
         return false;
 	   });
 	};
-	// 8. Call init - but why not return the value?
 	init();
 
 };
 
-// 2. I know I'm going to have to call this function so might as well call and console.log
+// 2. I know I'm going to have to call this function so might as well call
 Thermostat();
