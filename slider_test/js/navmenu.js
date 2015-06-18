@@ -1,10 +1,8 @@
 // Define prototypical Navigation Menu function
 Element.prototype.NavMenu = function(){
 
-	var navMenu = this;
 	var hamburger = document.getElementById('hamburger');
 	var containerPos = 0;
-	console.log(containerPos);
 	var container = document.getElementById('container');
 
 	this.moveNav = function(){

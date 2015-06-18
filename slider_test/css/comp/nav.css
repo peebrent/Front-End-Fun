@@ -5,6 +5,10 @@ figure img{
 
 }
 
+#hamburger {
+  position: fixed;
+}
+
 #hamburger img{
   cursor: pointer;
 }
