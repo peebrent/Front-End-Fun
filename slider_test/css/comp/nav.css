@@ -1,0 +1,36 @@
+figure img{
+  width:25px;
+  height:auto;
+  margin:20px;
+
+}
+
+#hamburger img{
+  cursor: pointer;
+}
+
+#navMenu{
+  z-index: 1000;
+}
+
+#hiddenNav{
+  position: fixed;
+  background-color: #666;
+  width: 100%;
+  height: 1000px;
+  z-index: 1;
+  display: block;
+  left: 0;
+  top: 0;
+  color:#fff;
+}
+
+#hiddenNav ul li{
+  padding:15px 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.1em;
+}
+
+#hiddenNav ul li a{
+  text-decoration: none;
+}

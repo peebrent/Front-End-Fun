@@ -1,0 +1,21 @@
+// Main Function
+calculator = function(){
+
+var a = document.getElementById('a');
+var b = document.getElementById('b');
+var submit = document.getElementById('submit');
+
+if (a > b){
+document.write('A is greater than B!');
+
+}
+else if {
+document.write('B is greater than A!');
+}
+else{
+document.write('Equal')	
+}
+
+};
+
+submit.addEventListener('click',)
