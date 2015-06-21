@@ -5,6 +5,10 @@ figure img{
 
 }
 
+.no-js #hamburger {
+  display: none;
+}
+
 #hamburger {
   position: fixed;
 }
@@ -15,6 +19,18 @@ figure img{
 
 #navMenu{
   z-index: 1000;
+}
+
+.no-js #hiddenNav{
+  position: fixed;
+  background-color: #666;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+  display: block;
+  left: 0;
+  top: 0;
+  color:#fff;
 }
 
 #hiddenNav{
