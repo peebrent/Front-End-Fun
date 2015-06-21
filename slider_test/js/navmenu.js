@@ -17,6 +17,7 @@ Element.prototype.NavMenu = function(){
 			containerPos = 0;
 			}
 		});
+		
 	};
 
 	this.init = function(){
