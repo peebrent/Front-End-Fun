@@ -22,11 +22,11 @@ figure img{
 }
 
 .no-js #hiddenNav{
-  position: fixed;
+  position: relative;
   background-color: #666;
   width: 100%;
   height: auto;
-  z-index: 100;
+  z-index: 10;
   display: block;
   left: 0;
   top: 0;
