@@ -15,10 +15,9 @@ var photos = new Object();
     '</div>'
     '</div>';
 
-    console.log(modal.children[0].children[1]);
+ 
     modal.style.backgroundImage = target.style.backgroundImage;    
     modal.style.zIndex = "11";
-    modal.children[0].style.zIndex = "12";
    
     modal.children[0].children[2].addEventListener('click',function(){
       modal.style.zIndex = "0";
@@ -44,6 +43,7 @@ var photos = new Object();
         '</div>';
          li.addEventListener('mousedown',gallery.singlePhoto);
          ul.appendChild(li);
+   
 
       });
   };

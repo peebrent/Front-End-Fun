@@ -4,7 +4,7 @@ nav{
   background:#3f3f3f;
   position:absolute;
   left:0px;
-  z-index:0;
+  z-index:1;
 }
 nav ul{
   list-style-type:none;
@@ -33,4 +33,5 @@ nav ul li{
   background: url('../../img/hamburger.svg');
   background-size: 32px 32px;
   background-position: 4px 4px;
+  cursor: pointer;
 }

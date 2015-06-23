@@ -2,7 +2,6 @@
   position:absolute;
   width:100%;
   height:100%;
-  opacity:0;
   z-index:0;
   background-position: center center;
   background-size: contain;
@@ -28,6 +27,13 @@
   margin-left:20%;
   margin-right:20%;
   bottom:-33%;
+  color:rgba(255,255,255,0.8);
+  font-weight:100;
+  opacity:0.8;
+  width: 100%;
+  position: absolute;
+  text-shadow:rgba(122,122,122,0.8);
+  letter-spacing:0.065em;
 }
 .single-photo .meta h2,.single-photo .meta h3,.single-photo .meta p{
   font-size:64px;
