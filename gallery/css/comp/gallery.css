@@ -54,7 +54,8 @@
   position: absolute;
   top: 24px;
   left: 100%;
-  margin-left: -100px
+  margin-left: -100px;
+
 }
 
 .gallery ul li .stats div{

@@ -2,26 +2,32 @@
 Element.prototype.Gallery = function(){
 var gallery = this;
 var ul = gallery.children[0];
+var modal = document.getElementById('modal');
 
 var photos = new Object();
   // Define global variables
 
   this.singlePhoto = function(ev){
+    // Assign target property to a variable
     var target = ev.target;
-    var modal = document.getElementById('modal');
-    
+    // Set innerHTML of modal Section
     modal.innerHTML = '<div class ="single-photo">'+
     target.innerHTML+'<div class="close">'+
     '</div>'
     '</div>';
-
+    // Set modal to target
     modal.children[0].style.backgroundImage = target.style.backgroundImage;    
+    // Set Modal zIndex
     modal.style.zIndex = "11";
-   
-    modal.children[0].children[2].addEventListener('click',function(){
+    // Add Event Listener to close button
+    modal.children[0].lastChild.addEventListener('click',function(){
       modal.style.zIndex = "0";
     });  
-
+    // Hide Description if not filled out or 'null'
+    if (modal.children[0].firstChild.lastChild.innerHTML === 'null'){
+      modal.children[0].firstChild.lastChild.style.display = 'none';
+    };
+   
   };
 
   this.layoutPhotos = function(){
@@ -44,6 +50,8 @@ var photos = new Object();
         '</div>';
          li.addEventListener('mousedown',gallery.singlePhoto);
          ul.appendChild(li);
+
+         
    
       });
   };
@@ -59,7 +67,6 @@ var photos = new Object();
             var response = JSON.parse(xhr.responseText);
             photos = response.photos;
             gallery.layoutPhotos();
-            console.log(photos);
             
           // JSON.parse does not evaluate the attacker's scripts via xhr.responseText.
 
