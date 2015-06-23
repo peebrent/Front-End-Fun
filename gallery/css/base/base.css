@@ -48,6 +48,11 @@ body {
   margin: 0 auto;
   padding: 0px 40px;
   background-color: rgba(0, 0, 0, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:none;
+  overflow: hidden; 
+
 }
 section{
   width:100%;

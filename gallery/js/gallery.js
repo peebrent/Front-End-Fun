@@ -9,19 +9,20 @@ var photos = new Object();
   this.singlePhoto = function(ev){
     var target = ev.target;
     var modal = document.getElementById('modal');
+    
     modal.innerHTML = '<div class ="single-photo">'+
     target.innerHTML+'<div class="close">'+
     '</div>'
     '</div>';
 
-    console.log(target.innerHTML);
+    console.log(modal.children[0].children[1]);
     modal.style.backgroundImage = target.style.backgroundImage;    
     modal.style.zIndex = "11";
-    modal.style.backgroundSize = "85%";
-    modal.style.backgroundPosition = "center";
-    modal.style.backgroundRepeat = "no-repeat";
     modal.children[0].style.zIndex = "12";
-    modal.style.overflow = "hidden";
+   
+    modal.children[0].children[2].addEventListener('click',function(){
+      modal.style.zIndex = "0";
+    });  
 
   };
 
