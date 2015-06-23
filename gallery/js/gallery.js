@@ -15,8 +15,7 @@ var photos = new Object();
     '</div>'
     '</div>';
 
- 
-    modal.style.backgroundImage = target.style.backgroundImage;    
+    modal.children[0].style.backgroundImage = target.style.backgroundImage;    
     modal.style.zIndex = "11";
    
     modal.children[0].children[2].addEventListener('click',function(){
@@ -38,13 +37,14 @@ var photos = new Object();
         photo.name+
         '</h5><h6>'+
         photo.user.fullname+
-        '</h6></div><div class="stats"></div>'+
+        '</h6><h7>'+
+        photo.description+
+        '</h7></div><div class="stats"></div>'+
         photo.rating+'</div></div>'+
         '</div>';
          li.addEventListener('mousedown',gallery.singlePhoto);
          ul.appendChild(li);
    
-
       });
   };
 
@@ -59,6 +59,7 @@ var photos = new Object();
             var response = JSON.parse(xhr.responseText);
             photos = response.photos;
             gallery.layoutPhotos();
+            console.log(photos);
             
           // JSON.parse does not evaluate the attacker's scripts via xhr.responseText.
 

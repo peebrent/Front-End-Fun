@@ -65,3 +65,7 @@
   font-weight:100;
   font-size:32px;
 }
+
+.gallery ul li .meta h7{
+  display:none;
+}
