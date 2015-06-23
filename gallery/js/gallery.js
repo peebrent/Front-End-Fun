@@ -1,12 +1,52 @@
 //Define prototypical Gallery function
 Element.prototype.Gallery = function(){
+var gallery = this;
+var ul = gallery.children[0];
 
+var photos = new Object();
   // Define global variables
+
+  this.singlePhoto = function(ev){
+    var target = ev.target;
+    var modal = document.getElementById('modal');
+    modal.innerHTML = '<div class ="single-photo">'+
+    target.innerHTML+'<div class="close">'+
+    '</div>'
+    '</div>';
+
+    console.log(target.innerHTML);
+    modal.style.backgroundImage = target.style.backgroundImage;    
+    modal.style.zIndex = "11";
+    modal.style.backgroundSize = "85%";
+    modal.style.backgroundPosition = "center";
+    modal.style.backgroundRepeat = "no-repeat";
+    modal.children[0].style.zIndex = "12";
+    modal.style.overflow = "hidden";
+
+  };
 
   this.layoutPhotos = function(){
       // add logic for each photo in here
+      
+      photos.forEach(function(photo,index){
+        var li = document.createElement('li');
 
+        li.style.backgroundImage = 'url("'+photo.image_url+'")';
+        li.style.backgroundSize = 'cover';
+        
+        li.innerHTML = '<div class ="meta"><h5>'+
+        photo.name+
+        '</h5><h6>'+
+        photo.user.fullname+
+        '</h6></div><div class="stats"></div>'+
+        photo.rating+'</div></div>'+
+        '</div>';
+         li.addEventListener('mousedown',gallery.singlePhoto);
+         ul.appendChild(li);
+
+      });
   };
+
 
   this.connect = function(){
       var xhr = new XMLHttpRequest();
@@ -15,7 +55,10 @@ Element.prototype.Gallery = function(){
 
       xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
-
+            var response = JSON.parse(xhr.responseText);
+            photos = response.photos;
+            gallery.layoutPhotos();
+            
           // JSON.parse does not evaluate the attacker's scripts via xhr.responseText.
 
         }

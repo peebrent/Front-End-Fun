@@ -29,7 +29,7 @@ nav ul li{
   left:10px;
   width:44px;
   height:44px;
-  z-index:50;
+  z-index:500;
   background: url('../../img/hamburger.svg');
   background-size: 32px 32px;
   background-position: 4px 4px;
