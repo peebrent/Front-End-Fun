@@ -24,8 +24,10 @@ var photos = new Object();
       modal.style.zIndex = "0";
     });  
     // Hide Description if not filled out or 'null'
-    if (modal.children[0].firstChild.lastChild.innerHTML === 'null'){
-      modal.children[0].firstChild.lastChild.style.display = 'none';
+    var descriptor = modal.children[0].firstChild.lastChild;
+    
+    if (descriptor.innerHTML === 'null'){
+      descriptor.style.display = 'none';
     };
    
   };
@@ -45,8 +47,8 @@ var photos = new Object();
         photo.user.fullname+
         '</h6><h7>'+
         photo.description+
-        '</h7></div><div class="stats"></div>'+
-        photo.rating+'</div></div>'+
+        '</h7></div><div class="stats"><div>'+
+        photo.rating+'</div></div></div></div>'+
         '</div>';
          li.addEventListener('mousedown',gallery.singlePhoto);
          ul.appendChild(li);

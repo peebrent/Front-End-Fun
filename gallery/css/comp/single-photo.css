@@ -73,7 +73,7 @@
   padding-top:60px;
   float:right;
   clear:both;
-  display:none;
+  padding-left: 20px;
 }
 .single-photo .stats div{
   width:25%;
