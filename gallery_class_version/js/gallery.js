@@ -7,30 +7,31 @@ var modal = document.getElementById('modal');
 var photos = new Object();
   // Define global variables
 
-  this.singlePhoto = function(ev){
-    // Assign target property to a variable
-    var target = ev.target;
-    // Set innerHTML of modal Section
-    modal.innerHTML = '<div class ="single-photo">'+
-    target.innerHTML+'<div class="close">'+
-    '</div>'
-    '</div>';
-    // Set modal to target
-    modal.children[0].style.backgroundImage = target.style.backgroundImage;    
-    // Set Modal zIndex
-    modal.style.zIndex = "11";
-    // Add Event Listener to close button
-    modal.children[0].lastChild.addEventListener('click',function(){
-      modal.style.zIndex = "0";
-    });  
-    // Hide Description if not filled out or 'null'
-    var descriptor = modal.children[0].firstChild.lastChild;
-    console.log(ev);
-    if (descriptor.innerHTML === 'null'){
-      descriptor.style.display = 'none';
-    };
-   
-  };
+  this.singlePhoto = function(ev) {
+
+     console.log(ev.target.style.backgroundImage);
+
+   var section = document.createElement('section');
+   section.classList.add('single-photo');
+   section.innerHTML = ev.target.innerHTML;
+   section.style.backgroundImage = ev.target.style.backgroundImage;
+   section.style.backgroundRepeat = 'no-repeat';
+   section.style.backgroundSize = 'contain';
+   section.style.backgroundPosition = 'center center';
+   section.style.height = '100%';
+
+   var closeButton = document.createElement('div');
+   closeButton.classList.add('close');
+
+   closeButton.addEventListener('click',function(){
+       section.style.display = 'none';
+   });
+
+   section.appendChild(closeButton);
+   container.appendChild(section);
+
+
+ };
 
   this.layoutPhotos = function(){
       // add logic for each photo in here

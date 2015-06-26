@@ -1,0 +1,88 @@
+/********** TABS **********/
+.tab-list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tab-list h3{
+  margin: 10px 0px;
+}
+.tab-list li {
+  display: inline-block;
+  list-style-type: none;
+  background-color: #ccc;
+  width: 50%;
+  font-size: .7em;
+  text-align: center;
+  font-style: italic;
+  box-sizing: border-box;
+  
+}
+
+.tab-list li.active{
+	border-bottom:none;
+}
+
+.tab-list li:first-child {
+  float: left;
+}
+
+.tab-list li a {
+  color: #333;
+  display: block;
+  padding: 3px 10px 3px 10px;
+    text-decoration: none;
+}
+
+
+/********** HOVER STATES **********/
+.tab-list li.active, .tab-list li.hover {
+  background-color: #e5e5e5;
+}
+
+.tab-list li.active a , .tab-list li.active a:hover{
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.tab-list li a:hover{
+	background-color:#e6e6e6;
+	transition: background-color 0.5s ease;
+}
+
+/********** PANELS **********/
+.tab-panel {
+  display: none;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 150px;
+  overflow: auto;
+  font-size: .7em;
+  font-weight: bold;
+  -webkit-font-smoothing:antialiased;
+  line-height: 1.6em;
+  font-family: helvetica, arial, sans-serif;
+  list-style: none;
+}
+
+.tab-panel a:hover{
+	color:#47add3;
+}
+
+.tab-panel a{
+	color:#333;
+	text-decoration: none;
+}
+.tab-panel li{
+  border-bottom: 1px solid #e0e0e0;
+}
+.tab-panel.active {
+  display: block;
+  width: 100%;
+}
+
+.tab-panel p {
+  margin: 20px;
+}
