@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="tabs.css">
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  
+  <head>
+    <link rel="stylesheet" href="tabs.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  </head>
 
-</head>
-<body>
+  <body>
+    <div class="tabs">
 
+            <ul class="tab-list">
+              <li class="active"><a class="tab-control" href="#tab-1"><h3>* Latest Stories</h3></a></li>
+              <li><a class="tab-control" href="#tab-2"><h3>* Popular</h3></a></li>
+            </ul>
 
-<div class="tabs">
+            <section class="tab-panel active" id="tab-1">
+              <aside>
+                <li>
+                  <h4 class="collection">The Breakdown</h4>	
+    	           	<p>
+    	           	<a href="/">Prosciutto ribeye doner, beef ribs boudin shank ground round</a>
+    	           	</p>
+                </li>
+              </aside>
+              <aside>
+               	<li>
+                  <h4 class="collection">Boom this is a new one</h4> 
+    	           	<p>
+    	           	<a href="/">Pork loin pork belly brisket, bacon hamburger short loin alcatra drumstick</a>
+    	           	</p>
+               	</li>
+              </aside>
+              <aside>
+               	<li>
+    	           	<p>
+    	           	<a href="/">Pancetta tongue shoulder tenderloin, pig</a>
+    	           	</p>
+               	</li>
+              </aside>
+            </section>
 
-        <ul class="tab-list">
-          <li class="active"><a class="tab-control" href="#tab-1"><h3>* Latest Stories</h3></a></li>
-          <li><a class="tab-control" href="#tab-2"><h3>* Popular</h3></a></li>
-        </ul>
+            <section class="tab-panel" id="tab-2">
+              <aside>
+                <li>
+    	           	<p>
+    	           	<a href="/">Pork chop rump spare ribs, strip steak leberkas</a>
+    	           	</p>
+               	</li>
+              </aside>
+              <aside>
+               	<li>
+    	           	<p>
+    	           	<a href="/">Salami turkey ball tip doner swine filet mignon hamburger corned beef. Ribeye cow</a>
+    	           	</p>
+               	</li>
+              </aside>
+              <aside>
+               	<li>
+                  <h4 class="collection">Pig Latin and stuff</h4> 
+    	           	<p>
+    	           	<a href="/">Short loin venison filet mignon shank jowl, tri-tip flank jerky</a>
+    	           	</p>
+               	</li>
+              </aside>
+            </section>
 
-        <div class="tab-panel active" id="tab-1">
-           <li>	
+    </div><!-- .tabs -->
 
-	           	<p>
-	           	<a href="/">Prosciutto ribeye doner, beef ribs boudin shank ground round</a>
-	           	</p>
-           	</li>
-           	<li>
-	           	<p>
-	           	<a href="/">Pork loin pork belly brisket, bacon hamburger short loin alcatra drumstick</a>
-	           	</p>
-           	</li>
-           	<li>
-	           	<p>
-	           	<a href="/">Pancetta tongue shoulder tenderloin, pig</a>
-	           	</p>
-           	</li>
-        </div>
-
-        <div class="tab-panel" id="tab-2">
-           <li>
-	           	<p>
-	           	<a href="/">Pork chop rump spare ribs, strip steak leberkas</a>
-	           	</p>
-           	</li>
-           	<li>
-	           	<p>
-	           	<a href="/">Salami turkey ball tip doner swine filet mignon hamburger corned beef. Ribeye cow</a>
-	           	</p>
-           	</li>
-           	<li>
-	           	<p>
-	           	<a href="/">Short loin venison filet mignon shank jowl, tri-tip flank jerky</a>
-	           	</p>
-           	</li>
-        </div>
-
-        
-
-</div><!-- .tabs -->
-
-
-
-<script src="tabs.js"></script>
-
-
-</body>
+    <script src="tabs.js"></script>
+  </body>
 </html>
