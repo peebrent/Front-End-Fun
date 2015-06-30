@@ -14,6 +14,8 @@
 		<script src="js/slider.js"></script>
 		<script src="js/nav.js"></script>
 		<script src="js/gallery.js"></script>
+		<script src="js/contact.js"></script>
+		<script src="js/search.js"></script>
 	</head>
 	<body>
 
@@ -21,10 +23,16 @@
 				<ul>
 					<li class="nav-item" data-section="slider">Home</li>
 					<li class="nav-item" data-section="gallery">Gallery</li>
+					<li class="nav-item" data-section="contact">Contact</li>
 				</ul>
 			</nav>
 			
 			<div id="container">
+
+				<div id="search">
+					<input placeholder="search" type="search">
+				</div>
+
 				<section id="slider" class="slider" data-index="0">
 						<ul>
 							<li><img src="img/photos/california.jpg"></li>
@@ -36,6 +44,21 @@
 				<section id="gallery" class="gallery" data-index="1">
 					<ul>
 					</ul>
+				</section>
+				<section id="contact" class="contact">
+					<div class="bg">
+						<div id="form-wrapper" class="wrapper">
+							<h1>Contact Us</h1>
+							<form id="c_form" name="c_form">
+								<input type="text" name="name" id="name" placeholder="Please Enter Your Name" tabindex="1" autofocus>
+								<input type="email" name="email" id="email" placeholder="Please Enter Your Email" tabindex="2">
+								<input type="tel" name="tel" id="tele" placeholder="Please Enter Your Telephone" tabindex="3">
+								<textarea name="description" placeholder="Please Enter Your Message" type="text" rows="4" tabindex="4"></textarea>
+								<button id="contact-submit" tabindex="5">Send Email</button>
+							</form>
+						</div>
+					</div>
+					
 				</section>
 
 			</div><!-- #container -->
