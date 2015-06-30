@@ -77,6 +77,7 @@
 }
 .tab-panel li{
   border-bottom: 1px solid #e0e0e0;
+  margin-top:20px;
 }
 .tab-panel.active {
   display: block;
@@ -89,12 +90,12 @@
   line-height: 1.4;
   color: #47add3;
   -webkit-font-smoothing: antialiased;
-  margin:17px 0px -17px 20px;
+  margin:0px 0px 0px 20px;
   text-transform: capitalize;
 }
 
 .tab-panel p {
-  margin: 20px 20px 17px 20px;
+  margin: 0px 20px 17px 20px;
 }
 
 .tab-control{
