@@ -1,10 +1,16 @@
 //Define prototypical Gallery function
 Element.prototype.Gallery = function(){
+  
+
+
   var gallery = this;
   var ul = gallery.children[0];
   var photos = new Object();
   var container = document.getElementById('container');
+  this.allTheTags = [];
   // Define global variables
+
+  
 
   this.singlePhoto = function(ev) {
 
@@ -35,6 +41,32 @@ Element.prototype.Gallery = function(){
 
   };
 
+  this.filterPhotos = function(query){
+          for( var i=0;i<ul.children.length; i++){
+            //grab the tags!
+            var tags = ul.children[i].dataset.tags;
+            var arr = tags.split(',');
+            var matched = false;
+
+            arr.forEach(function(tag){
+              if (tag === query){//check if a tag is equal to the query
+                ul.children[i].style.display = 'block';      //if there is a match, show the li
+                matched = true;
+              }
+            });
+            if (matched === false){
+              ul.children[i].style.display = 'none';       //if there isn't a match, hide the li  
+            }
+            if(query === 'all'){
+              ul.children[i].style.display = 'block';   
+            }
+        
+          };
+  };
+  
+    
+  
+
   this.layoutPhotos = function(){
       // add logic for each photo in here
 
@@ -54,7 +86,15 @@ Element.prototype.Gallery = function(){
                 photo.rating+'</div></div>'+
                 '</div>';
 
+          var tags = [];
+
+          photo.tags.forEach(function(tag){
+            tags.push(tag.toLowerCase());
+          });//for each is best as its a blocking function as opposed to for loop
+
+          li.dataset.tags = tags;
           li.dataset.description = photo.description;
+
 
           li.addEventListener('click',gallery.singlePhoto);
 

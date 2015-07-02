@@ -33,6 +33,8 @@ Element.prototype.Nav = function(){
       sections[i].style.opacity = '0';
       sections[i].style.zIndex = '0';
       sections[i].style.display = 'none';
+    
+  
     };
   };
 
@@ -59,7 +61,6 @@ Element.prototype.Nav = function(){
         var id = ev.target.dataset.section;
         nav.showSection(id);
         nav.toggleNav();
-
        
       });
    
