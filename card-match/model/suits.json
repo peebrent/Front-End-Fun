@@ -1,0 +1,64 @@
+{
+  "cardTypes": [
+    {
+      "suit": "hearts"
+    },
+    {
+      "suit": "clubs"
+    },
+    {
+      "suit": "diamonds"
+    },
+    {
+      "suit": "spades"
+    },
+    {
+      "suit": "hearts"
+    },
+    {
+      "suit": "clubs"
+    },
+    {
+      "suit": "diamonds"
+    },
+    {
+      "suit": "spades"
+    },
+    {
+      "suit": "hearts"
+    },
+    {
+      "suit": "clubs"
+    },
+    {
+      "suit": "diamonds"
+    },
+    {
+      "suit": "spades"
+    },
+    {
+      "suit": "hearts"
+    },
+    {
+      "suit": "clubs"
+    },
+    {
+      "suit": "diamonds"
+    },
+    {
+      "suit": "spades"
+    },
+    {
+      "suit": "hearts"
+    },
+    {
+      "suit": "clubs"
+    },
+    {
+      "suit": "diamonds"
+    },
+    {
+      "suit": "spades"
+    }
+  ]
+}

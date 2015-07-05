@@ -1,0 +1,35 @@
+html,body{
+	background: rgba(8,91,11,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(8,91,11,1) 0%, rgba(2,45,3,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(8,91,11,1)), color-stop(100%, rgba(2,45,3,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(8,91,11,1) 0%, rgba(2,45,3,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(8,91,11,1) 0%, rgba(2,45,3,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(8,91,11,1) 0%, rgba(2,45,3,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(8,91,11,1) 0%, rgba(2,45,3,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#085b0b', endColorstr='#022d03', GradientType=1 );
+	background-repeat: no-repeat;
+	height: 100%;
+}
+#title{
+	font-size: 51px;
+	color: #fff;
+	text-align: center;
+	display: block;
+	padding: 40px 0px;
+}
+div#memory_board{	
+	width: 56%;
+	margin: 0 auto;
+	display: block;
+}
+
+div#memory_board > div{
+	background:url(../img/bicycle-back.png) no-repeat;
+	background-size: contain;
+	width: 8vw;
+	height: 11vw;
+	float: left;
+	margin: 10px;
+	padding:10px;
+	cursor: pointer;
+}

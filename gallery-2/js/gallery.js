@@ -50,12 +50,12 @@ Element.prototype.Gallery = function(){
 
             arr.forEach(function(tag){
               if (tag === query){//check if a tag is equal to the query
-                ul.children[i].style.display = 'block';      //if there is a match, show the li
+                ul.children[i].style.display = 'block';//if there is a match, show the li
                 matched = true;
               }
             });
             if (matched === false){
-              ul.children[i].style.display = 'none';       //if there isn't a match, hide the li  
+              ul.children[i].style.display = 'none';//if there isn't a match, hide the li  
             }
             if(query === 'all'){
               ul.children[i].style.display = 'block';   
