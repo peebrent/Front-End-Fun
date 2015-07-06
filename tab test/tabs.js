@@ -18,5 +18,3 @@ $('.tab-list').each(function(){
     }
   });
 });
-
-console.log(window);
