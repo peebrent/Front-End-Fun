@@ -17,19 +17,24 @@ html,body{
 	display: block;
 	padding: 40px 0px;
 }
-div#memory_board{	
+div#felt{	
 	width: 56%;
 	margin: 0 auto;
 	display: block;
 }
 
-div#memory_board > div{
+div#felt > div{
 	background:url(../img/bicycle-back.png) no-repeat;
 	background-size: contain;
 	width: 8vw;
 	height: 11vw;
 	float: left;
-	margin: 10px;
+	margin: 12px;
 	padding:10px;
 	cursor: pointer;
 }
+
+  .suit_icon {
+      width: 100px;
+      height: 100px;
+    }
