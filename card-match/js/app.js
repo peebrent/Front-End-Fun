@@ -1,2 +1,2 @@
-var cardGameElement = document.getElementById('game');
+var cardGameElement = document.getElementById('felt');
 cardGameElement.CardsGame();

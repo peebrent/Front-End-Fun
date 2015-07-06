@@ -1,6 +1,9 @@
-var cardGameElement = document.getElementById('game');
+var cardGameElement = document.getElementById('felt');
 cardGameElement.CardsGame();
 
+//Define prototypical Gallery function
+Element.prototype.CardsGame = function(){
+  
 
 
 //Hard Coding in Array Elements, these should pull from Model
@@ -24,7 +27,7 @@ Array.prototype.shuffle = function(){
 }
 //Declare our New Game
 function newGame(){
-
+	cardGameFlipcard()[]
 	cards_flipped = 0;
 	var output = '';
 	cardGame_array.shuffle();
@@ -102,3 +105,5 @@ this.connect = function(){
 
 //Instantiate our New Game
 newGame();
+
+};
