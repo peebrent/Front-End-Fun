@@ -100,7 +100,7 @@ function connect(){
             var types = response.cardTypes;
             
             for(var x in types){
-                cardGame_array.push(types[x].suit);
+                cardGame_array = cardGame_array.push(types[x].suit);
                 	
             }
 		}
