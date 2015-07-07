@@ -3,7 +3,9 @@
   
 
 //Hard Coding in Array Elements, these should pull from Model
-var cardGame_array = [1,2,3,4,5,1,2,3,4,5];
+var cardGame_array = [];
+console.log(cardGame_array);
+       
 //Empty Array for Values
 var cardGame_values = [];
 //Empty Array for IDs
@@ -39,6 +41,9 @@ function cardGameFlipcard(card,value){
 	if(card.innerHTML == "" && cardGame_values.length < 2){
 		
 		card.style.background = 'url(img/french-suits.svg#path1939) no-repeat #fff';
+		// card.setAttribute("class", "frontOfCard");
+		// card.style.webkitTransform = "perspective(600px) rotateX(0deg)";
+		// card.style.webkitTransition = "transform .5s linear 0s;";
 		card.style.backgroundSize = '240px 210px, auto, 50px';
 		card.style.backgroundPosition = '35px 50px';
 
@@ -64,9 +69,15 @@ function cardGameFlipcard(card,value){
 					var card_1 = document.getElementById(cardGame_card_ids[0]);
 					var card_2 = document.getElementById(cardGame_card_ids[1]);
 					card_1.style.background = 'url(img/bicycle-back.png) no-repeat';
+					// card_1.setAttribute("class", "backOfCard");
+					// card_1.style.webkitTransform = "perspective(600px) rotateX(180deg)";
+					// card_1.style.webkitTransition = "transform .5s linear 0s;";
 					card_1.style.backgroundSize = 'contain';
 					card_1.innerHTML = "";
 					card_2.style.background = 'url(img/bicycle-back.png) no-repeat';
+					// card_2.setAttribute("class", "backOfCard");
+					// card_2.style.webkitTransform = "perspective(600px) rotateX(180deg)";
+					// card_2.style.webkitTransition = "transform .5s linear 0s;";
 					card_2.style.backgroundSize = 'contain';
 					card_2.innerHTML = "";
 					cardGame_values = [];
@@ -90,9 +101,9 @@ function connect(){
             
             for(var x in types){
                 cardGame_array.push(types[x].suit);
+                	
             }
-		console.log(cardGame_array);
-        }
+		}
 
       }
 

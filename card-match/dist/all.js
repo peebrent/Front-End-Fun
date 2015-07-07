@@ -1,10 +1,9 @@
 var cardGameElement = document.getElementById('felt');
 cardGameElement.CardsGame();
 
-//Define prototypical Gallery function
-Element.prototype.CardsGame = function(){
+// //Define prototypical Gallery function
+// Element.prototype.CardsGame = function(){
   
-
 
 //Hard Coding in Array Elements, these should pull from Model
 var cardGame_array = [1,2,3,4,5,1,2,3,4,5];
@@ -27,7 +26,7 @@ Array.prototype.shuffle = function(){
 }
 //Declare our New Game
 function newGame(){
-	cardGameFlipcard()[]
+
 	cards_flipped = 0;
 	var output = '';
 	cardGame_array.shuffle();
@@ -39,21 +38,22 @@ function newGame(){
 	
 }
 //Flip the card - lots of logic found online here...
-function cardGameFlipcard(card,val){
+function cardGameFlipcard(card,value){
 	if(card.innerHTML == "" && cardGame_values.length < 2){
 		
 		card.style.background = 'url(img/french-suits.svg#path1939) no-repeat #fff';
+		card.setAttribute("class", "frontOfCard");
+		card.style.webkitTransform = "perspective(600px) rotateY(180deg)";
 		card.style.backgroundSize = '240px 210px, auto, 50px';
 		card.style.backgroundPosition = '35px 50px';
 
 		
-		
-		card.innerHTML = val;
+		card.innerHTML = value;
 		if(cardGame_values.length == 0){
-			cardGame_values.push(val);
+			cardGame_values.push(value);
 			cardGame_card_ids.push(card.id)
 		}else if(cardGame_values.length == 1){
-			cardGame_values.push(val);
+			cardGame_values.push(value);
 			cardGame_card_ids.push(card.id);
 			if(cardGame_values[0] == cardGame_values[1]){
 				cards_flipped +=2;
@@ -69,9 +69,13 @@ function cardGameFlipcard(card,val){
 					var card_1 = document.getElementById(cardGame_card_ids[0]);
 					var card_2 = document.getElementById(cardGame_card_ids[1]);
 					card_1.style.background = 'url(img/bicycle-back.png) no-repeat';
+					card_1.setAttribute("class", "backOfCard");
+					card_1.style.webkitTransform =“perspective(600px) rotateY(0deg)”;
 					card_1.style.backgroundSize = 'contain';
 					card_1.innerHTML = "";
 					card_2.style.background = 'url(img/bicycle-back.png) no-repeat';
+					card_2.setAttribute("class", "backOfCard");
+					card_2.style.webkitTransform =“perspective(600px) rotateY(0deg)”;
 					card_2.style.backgroundSize = 'contain';
 					card_2.innerHTML = "";
 					cardGame_values = [];
@@ -83,7 +87,7 @@ function cardGameFlipcard(card,val){
 	}
 }
 //Seems like we should pull the data from here and push to cardGame_array
-this.connect = function(){
+function connect(){
       var xhr = new XMLHttpRequest();
       xhr.open("GET", "./model/suits.json", true);
       xhr.setRequestHeader("Content-Type", "application/json");
@@ -91,19 +95,21 @@ this.connect = function(){
       xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             var response = JSON.parse(xhr.responseText);
-            types = response.cardTypes;
-
+            var types = response.cardTypes;
+            
             for(var x in types){
-                console.log([types[x].suit]);
-                cardGame_array.push([types]);
+                cardGame_array.push(types[x].suit);
             }
-         
+		console.log(cardGame_array);
         }
+
       }
+
       xhr.send();
 };
 
-//Instantiate our New Game
+//Instantiate our Model and New Game
+connect();
 newGame();
 
-};
+// };
