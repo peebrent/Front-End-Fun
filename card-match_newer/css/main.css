@@ -1,0 +1,53 @@
+html, body {
+  background: #085b0b;
+  background: -moz-radial-gradient(center, ellipse cover, #085b0b 0%, #022d03 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #085b0b), color-stop(100%, #022d03));
+  background: -webkit-radial-gradient(center, ellipse cover, #085b0b 0%, #022d03 100%);
+  background: -o-radial-gradient(center, ellipse cover, #085b0b 0%, #022d03 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #085b0b 0%, #022d03 100%);
+  background: radial-gradient(ellipse at center, #085b0b 0%, #022d03 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#085b0b', endColorstr='#022d03', GradientType=1 );
+  background-repeat: no-repeat;
+  height: 100%; }
+
+#card{
+
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+
+#title {
+  font-size: 51px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  padding: 40px 0px; }
+
+div#felt {
+  width: 68%;
+  margin: 0 auto;
+  display: block; 
+  perspective: 800px;
+ }
+
+div#felt > div {
+  background: url(../img/bicycle-back.png) no-repeat;
+  background-size: contain;
+/*  width: 8vw;*/
+  width:117px;
+  height: 11vw;
+  float: left;
+  margin: 12px;
+  padding: 10px;
+  cursor: pointer; }
+
+.suit_icon {
+  width: 100px;
+  height: 100px; }
+
+
+.front{
+  border-radius:9px;
+ /*  transform: rotateX( 180deg );*/
+}
