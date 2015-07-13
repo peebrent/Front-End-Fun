@@ -26,7 +26,9 @@ function newGame(){
 	var output = '';
 	cardGame_array.shuffle();
 	for(var i = 0; i < cardGame_array.length; i++){			
-		output += '<div id="card_'+i+'" onclick="cardGameFlipcard(this,\''+cardGame_array[i]+'\')"></div>'
+		output += '<div id="card_'+i+'" class="flipped" onclick="cardGameFlipcard(this,\''+cardGame_array[i]+'\')"></div>'
+		console.log(output);
+		
 	}
 	document.getElementById('felt').innerHTML = output;
 	
@@ -34,32 +36,47 @@ function newGame(){
 }
 //Flip the card - lots of logic found online here...
 function cardGameFlipcard(card,val){
+
 	if(card.innerHTML == "" && cardGame_values.length < 2){
 		// var node = document.createElement("div");
 		// console.log(val);
+		
 		if (val === 'hearts'){
+
 		card.classList.add("hearts");
 		card.classList.add("front");
-		card.style.background = 'url(img/french-suits.svg) no-repeat -112px 55px #fff';
-		card.style.backgroundSize = '238px 230px';
+		card.style.webkitTransform = "rotateX(0deg)";
+		card.style.transform = "rotateX(0deg)";
+	
+		card.style.background = 'url(img/hearts.svg) no-repeat 74% 84% #fff';
+		
+		
+		card.style.backgroundSize = '340% 340%';
 		}
 		if (val === 'spades'){
 		card.classList.add("spades");
 		card.classList.add("front");
-		card.style.background = 'url(img/french-suits.svg) no-repeat 17px 55px #fff';
-		card.style.backgroundSize = '238px 230px';
+		card.style.webkitTransform = "rotateX(0deg)";
+		card.style.transform = "rotateX(0deg)";
+		card.style.background = 'url(img/spades.svg) no-repeat 43% 86% #fff';
+		card.style.backgroundSize = '340% 340%';
+
 		}
 		if (val === 'clubs'){
 		card.classList.add("clubs");
 		card.classList.add("front");
-		card.style.background = 'url(img/french-suits.svg) no-repeat -112px -64px #fff';
-		card.style.backgroundSize = '238px 230px';
+		card.style.webkitTransform = "rotateX(0deg)";
+		card.style.transform = "rotateX(0deg)";
+		card.style.background = 'url(img/clubs.svg) no-repeat 74% 105% #fff';
+		card.style.backgroundSize = '340% 340%';
 		}
 		if (val === 'diamonds'){
 		card.classList.add("diamonds");
 		card.classList.add("front");
-		card.style.background = 'url(img/french-suits.svg) no-repeat 18px -64px #fff';
-		card.style.backgroundSize = '238px 230px';
+		card.style.webkitTransform = "rotateX(0deg)";
+		card.style.transform = "rotateX(0deg)";
+		card.style.background = 'url(img/diamonds.svg) no-repeat 43% 105% #fff';
+		card.style.backgroundSize = '340% 340%';
 		}
 		
 		
@@ -84,9 +101,15 @@ function cardGameFlipcard(card,val){
 					var card_2 = document.getElementById(cardGame_card_ids[1]);
 					card_1.style.background = 'url(img/bicycle-back.png) no-repeat';
 					card_1.style.backgroundSize = 'contain';
+					card_1.style.webkitTransform = "rotateX(180deg)";
+					card_1.style.transform = "rotateX(180deg)";
+					// card_1.style.backfaceVisibility = "hidden";
 					card_1.innerHTML = "";
 					card_2.style.background = 'url(img/bicycle-back.png) no-repeat';
 					card_2.style.backgroundSize = 'contain';
+					card_2.style.webkitTransform = "rotateX(180deg)";
+					card_2.style.transform = "rotateX(180deg)";
+					// card_2.style.backfaceVisibility = "hidden";
 					card_2.innerHTML = "";
 					cardGame_values = [];
 					cardGame_card_ids = [];

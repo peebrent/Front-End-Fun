@@ -10,12 +10,6 @@ html, body {
   background-repeat: no-repeat;
   height: 100%; }
 
-#card{
-
-  transform-style: preserve-3d;
-  transition: transform 1s;
-}
-
 
 #title {
   font-size: 51px;
@@ -28,26 +22,58 @@ div#felt {
   width: 68%;
   margin: 0 auto;
   display: block; 
-  perspective: 800px;
+  position: relative;
+
  }
+
+ .flipped {
+  transform: rotateX(180deg);
+
+}
 
 div#felt > div {
   background: url(../img/bicycle-back.png) no-repeat;
   background-size: contain;
 /*  width: 8vw;*/
-  width:117px;
+  width:12%;
   height: 11vw;
   float: left;
-  margin: 12px;
-  padding: 10px;
-  cursor: pointer; }
+  margin: 12px 0px 12px 12px;
+  padding: 10px 0px 10px 10px;
+  cursor: pointer; 
+  }
 
-.suit_icon {
-  width: 100px;
-  height: 100px; }
 
+
+.back {
+  background: url(../img/bicycle-back.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  }
 
 .front{
   border-radius:9px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+
  /*  transform: rotateX( 180deg );*/
+}
+
+.hearts{
+    transform: rotateX(0deg);
+
+}
+.spades{
+    transform: rotateX(0deg);
+    
+}
+.clubs{
+    transform: rotateX(0deg);
+    
+}
+.diamonds{
+    transform: rotateX(0deg);
+    
 }
