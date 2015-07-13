@@ -1,7 +1,7 @@
 
 
 //Hard Coding in Array Elements
-var cardGame_array = ['spades', 'hearts', 'clubs', 'diamonds','spades', 'hearts', 'clubs', 'diamonds','spades', 'hearts', 'clubs', 'diamonds','spades', 'hearts', 'clubs', 'diamonds'];
+var cardGame_array = ['spades', 'hearts', 'clubs', 'diamonds','spades', 'hearts', 'clubs', 'diamonds','spades', 'hearts', 'clubs', 'diamonds','spades', 'hearts', 'clubs', 'diamonds', 'spades', 'spades'];
 //Empty Array for Values
 var cardGame_values = [];
 //Empty Array for IDs
@@ -19,6 +19,7 @@ Array.prototype.shuffle = function(){
 		this[i] = temp;
 	}
 }
+
 //Declare our New Game
 function newGame(){
 
@@ -27,8 +28,6 @@ function newGame(){
 	cardGame_array.shuffle();
 	for(var i = 0; i < cardGame_array.length; i++){			
 		output += '<div id="card_'+i+'" class="flipped" onclick="cardGameFlipcard(this,\''+cardGame_array[i]+'\')"></div>'
-		console.log(output);
-		
 	}
 	document.getElementById('felt').innerHTML = output;
 	
@@ -42,27 +41,22 @@ function cardGameFlipcard(card,val){
 		// console.log(val);
 		
 		if (val === 'hearts'){
-
 		card.classList.add("hearts");
 		card.classList.add("front");
 		card.style.webkitTransform = "rotateX(0deg)";
 		card.style.transform = "rotateX(0deg)";
-	
 		card.style.background = 'url(img/hearts.svg) no-repeat 74% 84% #fff';
-		
-		
 		card.style.backgroundSize = '340% 340%';
 		}
-		if (val === 'spades'){
+		else if (val === 'spades'){
 		card.classList.add("spades");
 		card.classList.add("front");
 		card.style.webkitTransform = "rotateX(0deg)";
 		card.style.transform = "rotateX(0deg)";
 		card.style.background = 'url(img/spades.svg) no-repeat 43% 86% #fff';
 		card.style.backgroundSize = '340% 340%';
-
 		}
-		if (val === 'clubs'){
+		else if (val === 'clubs'){
 		card.classList.add("clubs");
 		card.classList.add("front");
 		card.style.webkitTransform = "rotateX(0deg)";
@@ -70,7 +64,7 @@ function cardGameFlipcard(card,val){
 		card.style.background = 'url(img/clubs.svg) no-repeat 74% 105% #fff';
 		card.style.backgroundSize = '340% 340%';
 		}
-		if (val === 'diamonds'){
+		else if (val === 'diamonds'){
 		card.classList.add("diamonds");
 		card.classList.add("front");
 		card.style.webkitTransform = "rotateX(0deg)";
@@ -83,7 +77,8 @@ function cardGameFlipcard(card,val){
 		if(cardGame_values.length == 0){
 			cardGame_values.push(val);
 			cardGame_card_ids.push(card.id)
-		}else if(cardGame_values.length == 1){
+		}
+		else if(cardGame_values.length == 1){
 			cardGame_values.push(val);
 			cardGame_card_ids.push(card.id);
 			if(cardGame_values[0] == cardGame_values[1]){
@@ -91,11 +86,11 @@ function cardGameFlipcard(card,val){
 				cardGame_values = [];
 				cardGame_card_ids = [];
 				if(cards_flipped == cardGame_array.length){
-					
 					document.getElementById('title').innerHTML = "You Win!";
 					newBoard();
 				}
-			}else{
+			}
+			else{
 				function flip2Back(){
 					var card_1 = document.getElementById(cardGame_card_ids[0]);
 					var card_2 = document.getElementById(cardGame_card_ids[1]);
