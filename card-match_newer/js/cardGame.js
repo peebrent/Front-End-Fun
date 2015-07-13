@@ -22,7 +22,7 @@ Array.prototype.shuffle = function(){
 
 //Declare our New Game
 function newGame(){
-
+	
 	cards_flipped = 0;
 	var output = '';
 	cardGame_array.shuffle();
@@ -35,10 +35,8 @@ function newGame(){
 }
 //Flip the card - lots of logic found online here...
 function cardGameFlipcard(card,val){
-
+	
 	if(card.innerHTML == "" && cardGame_values.length < 2){
-		// var node = document.createElement("div");
-		// console.log(val);
 		
 		if (val === 'hearts'){
 		card.classList.add("hearts");
@@ -98,13 +96,11 @@ function cardGameFlipcard(card,val){
 					card_1.style.backgroundSize = 'contain';
 					card_1.style.webkitTransform = "rotateX(180deg)";
 					card_1.style.transform = "rotateX(180deg)";
-					// card_1.style.backfaceVisibility = "hidden";
 					card_1.innerHTML = "";
 					card_2.style.background = 'url(img/bicycle-back.png) no-repeat';
 					card_2.style.backgroundSize = 'contain';
 					card_2.style.webkitTransform = "rotateX(180deg)";
 					card_2.style.transform = "rotateX(180deg)";
-					// card_2.style.backfaceVisibility = "hidden";
 					card_2.innerHTML = "";
 					cardGame_values = [];
 					cardGame_card_ids = [];

@@ -53,6 +53,14 @@ div#felt > div {
   transition: transform 1s;
   }
 
+.back-shuffle {
+  background: url(../img/bicycle-back-shuffle.png)!important;
+  background-repeat: no-repeat;
+  background-size: contain!important;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  }
+
 .front{
   border-radius:9px;
   transform-style: preserve-3d;
