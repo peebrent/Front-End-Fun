@@ -1,15 +1,8 @@
-
-
-//Hard Coding in Array Elements
 var cardGame_array = ['spades', 'hearts', 'clubs', 'diamonds','spades', 'hearts', 'clubs', 'diamonds','spades', 'hearts', 'clubs', 'diamonds','spades', 'hearts', 'clubs', 'diamonds', 'spades', 'spades'];
-//Empty Array for Values
 var cardGame_values = [];
-//Empty Array for IDs
 var cardGame_card_ids = [];
-//This will allow us to compare how many cards have been flipped to see if a match can be made or not
 var cards_flipped = 0;
 
-//Fisher-Yates Randomizer - Found Online
 Array.prototype.shuffle = function(){
 	var i = this.length, j, temp;
 	while(--i > 0){
@@ -20,24 +13,39 @@ Array.prototype.shuffle = function(){
 	}
 }
 
-//Declare our New Game
-function newGame(){
-	
+
+function shuffleVis(array) {
+  var m = array.length, t, i;
+  console.log(m);
+
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+    console.log(i);
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
+
+function newGame(){	
+	shuffleVis(cardGame_array);
 	cards_flipped = 0;
 	var output = '';
 	cardGame_array.shuffle();
 	for(var i = 0; i < cardGame_array.length; i++){			
 		output += '<div id="card_'+i+'" class="flipped" onclick="cardGameFlipcard(this,\''+cardGame_array[i]+'\')"></div>'
 	}
-	document.getElementById('felt').innerHTML = output;
-	
-	
+	document.getElementById('felt').innerHTML = output;	
 }
-//Flip the card - lots of logic found online here...
+
 function cardGameFlipcard(card,val){
-	
 	if(card.innerHTML == "" && cardGame_values.length < 2){
-		
 		if (val === 'hearts'){
 		card.classList.add("hearts");
 		card.classList.add("front");
@@ -69,9 +77,7 @@ function cardGameFlipcard(card,val){
 		card.style.transform = "rotateX(0deg)";
 		card.style.background = 'url(img/diamonds.svg) no-repeat 43% 105% #fff';
 		card.style.backgroundSize = '340% 340%';
-		}
-		
-		
+		}	
 		if(cardGame_values.length == 0){
 			cardGame_values.push(val);
 			cardGame_card_ids.push(card.id)
@@ -105,11 +111,10 @@ function cardGameFlipcard(card,val){
 					cardGame_values = [];
 					cardGame_card_ids = [];
 				}
-				setTimeout(flip2Back, 700);
+				setTimeout(flip2Back, 1200);
 			}
 		}
 	}
 }
 
-//Instantiate our New Game
 newGame();
