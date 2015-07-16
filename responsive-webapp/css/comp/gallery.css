@@ -41,11 +41,11 @@
 }
 
 .gallery ul li .meta h5{
-  font-size:24px;
+  font-size:1.5em;
 }
 
 .gallery ul li .meta h6{
-  font-size:12px;
+  font-size:0.75em;
 }
 
 .gallery ul li .stats{
@@ -63,5 +63,5 @@
   color:rgba(255,255,255, 0.3);
   text-shadow:rgba(122,122,122,0.3);
   font-weight:100;
-  font-size:32px;
+  font-size:2.0em;
 }
