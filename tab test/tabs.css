@@ -1,15 +1,15 @@
 /********** TABS **********/
-.tab-list {
+.tabbed-list {
   margin: 0;
   padding: 0;
   width: 100%;
   box-sizing: border-box;
 }
 
-.tab-list h3{
+.tabbed-list h3{
   margin: 10px 0px;
 }
-.tab-list li {
+.tabbed-list li {
   display: inline-block;
   list-style-type: none;
   background-color: #ccc;
@@ -21,15 +21,15 @@
   
 }
 
-.tab-list li.active{
+.tabbed-list li.active{
 	border-bottom:none;
 }
 
-.tab-list li:first-child {
+.tabbed-list li:first-child {
   float: left;
 }
 
-.tab-list li a {
+.tabbed-list li a {
   color: #333;
   display: block;
   padding: 3px 10px 3px 10px;
@@ -38,16 +38,16 @@
 
 
 /********** HOVER STATES **********/
-.tab-list li.active, .tab-list li.hover {
+.tabbed-list li.active, .tabbed-list li.hover {
   background-color: #e5e5e5;
 }
 
-.tab-list li.active a , .tab-list li.active a:hover{
+.tabbed-list li.active a , .tabbed-list li.active a:hover{
   color: #333;
   background-color: #f4f4f4;
 }
 
-.tab-list li a:hover{
+.tabbed-list li a:hover{
 	background-color:#e6e6e6;
 	transition: background-color 0.5s ease;
 }
